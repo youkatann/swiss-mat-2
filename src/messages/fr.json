@@ -1,0 +1,157 @@
+{
+    "Navbar": {
+        "Catalog": "Catalogue",
+        "Benefits": "Avantages",
+        "FAQ": "FAQ",
+        "Contacts": "Contact",
+        "CTAButtonText": "Demander un devis"
+    },
+        "Hero": {
+        "UpperText": "Fabriqué à Sierre — Cutting & assembly performed in Switzerland",
+        "Title": "Tapis EVA sur-mesure — Confort. Propreté. Durabilité.",
+        "Subtitle": "Coupés et assemblés à Sierre (Valais). Commande en ligne, livraison 1–3 jours en Suisse.",
+        "PrimaryButtonText": "Pré-commander — CHF 120",
+        "SecondaryButtonText": "Ou contactez-nous sur WhatsApp",
+        "Benefits": {
+            "Benefit1": {
+                "Title": "Imperméable"
+            },
+            "Benefit2": {
+                "Title": "Anti-glisse"
+            },
+            "Benefit3": {
+                "Title": "Facile à nettoyer"
+            },
+             "Benefit4": {
+                "Title": "Ajustement sur-mesure"
+            }
+        }
+    },
+        "Why": {
+        "Title": "Pourquoi choisir SwissMat?",
+        "Benefits": {
+            "Benefit1": {
+                "Title": "Matériau technique",
+                "Description": "EVA haute densité — résiste au gel et à la chaleur. Matériau durable et écologique, sans odeur désagréable."
+            },
+            "Benefit2": {
+                "Title": "Fit parfait",
+                "Description": "Coupe sur modèle — pas de glissements. Chaque tapis est découpé selon les dimensions exactes de votre véhicule."
+            },
+            "Benefit3": {
+                "Title": "Fabrication locale",
+                "Description": "Contrôle qualité à Sierre — livraison rapide CH. Soutien de l'économie locale valaisanne."
+            }
+        }
+        
+    },
+    "Reviews": {
+        "Title": "Ce que nos clients disent",
+        "Reviews": {
+            "Review1": {
+                "Author": "— Anaïs, Sion",
+                "Text": "Qualité top — livraison express à Sierre. Mes tapis ont transformé la voiture."
+            },
+            "Review2": {
+                "Author": "— Marc, Martigny",
+                "Text": "Parfait ajustement pour mon Audi Q5. Finition impeccable, fabrication suisse au top."
+            },
+            "Review3": {
+                "Author": "— Sophie, Monthey",
+                "Text": "Service client excellent, livraison rapide. Je recommande vivement SwissMat."
+            }
+        }
+        
+    },
+    "Process": {
+        "Title": "Étapes de livraison",
+        "Steps": {
+            "Step1": {
+                "Title": "Commande & Confirmation",
+                "Description": "Validation immédiate de votre configuration"
+            },
+            "Step2": {
+                "Title": "Coupe & Assemblage",
+                "Description": "Fabrication à Sierre (24–48h)"
+            },
+            "Step3": {
+                "Title": "Contrôle qualité",
+                "Description": "Vérification et emballage soigné"
+            },
+            "Step4": {
+                "Title": "Livraison",
+                "Description": "1–3 jours en Suisse / Pickup Sierre"
+            }
+        }
+    },
+    "FAQ": {
+        "Title": "Questions fréquentes",
+        "Questions": {
+            "Question1": {
+                "Question": "Combien de temps pour une commande?",
+                "Answer": "Nos tapis sont fabriqués dans un délai de 48 à 72 heures après confirmation de commande. La livraison prend ensuite 1 à 3 jours ouvrables en Suisse."
+            },
+            "Question2": {
+                "Question": "Quelle garantie offrez-vous?",
+                "Answer": "Nous offrons une garantie de 1 an sur tous nos tapis EVA contre les défauts de fabrication et l'usure normale."
+            },
+            "Question3": {
+                "Question": "Les tapis sentent-ils?",
+                "Answer": "Non, nos tapis EVA sont fabriqués avec un matériau neutre et sans odeur, contrairement à certains tapis en caoutchouc."
+            },
+            "Question4": {
+                "Question": "Peut-on laver les tapis?",
+                "Answer": "Oui, les tapis EVA se nettoient très facilement à l'eau savonneuse. Ils résistent également au gel et à la chaleur."
+            },
+            "Question5": {
+                "Question": "Livrez-vous en dehors de la Suisse?",
+                "Answer": "Oui, nous livrons dans toute l'Europe. Contactez-nous pour un devis personnalisé selon votre destination."
+            },
+            "Question6": {
+                "Question": "Quelle est votre politique de retour?",
+                "Answer": "Vous disposez de 14 jours pour retourner vos tapis s'ils n'ont pas été utilisés, dans leur emballage d'origine."
+            }
+        }
+    },
+    "Footer": {
+        "Title": "SwissMat — Tapis EVA fabriqués localement. Livraison CH 1–3 jours.",
+        "Subtitle": "Manufactured in Sierre, Valais — SwissMat",
+        "Contact": "Contact",
+        "QuickLinks": "Liens rapides",
+        "Address": "Sierre, Valais Suisse",
+        "PrivacyPolicy": "Politique de confidentialité",
+        "ReturnPolicy": "Politique de retour",
+        "AGB": "CGV"
+    },
+    "Constructor": {
+        "Title": "Configurez votre tapis",
+        "Make": "Marque",
+        "MakePlaceholder": "Choisir une marque",
+        "Model": "Modèle",
+        "ModelPlaceholder": "Choisir un modèle",
+        "Pattern": "Dessin",
+        "BaseColor": "Choisissez la couleur du tapis",
+        "EdgeColor": "Choisissez la couleur de l'ourlet",
+        "Kit": "Kit",
+        "KitOption1": "Avant (CHF 120)",
+        "KitOption2": "Intégral + coffre (CHF 160)",
+        "ContactInfo": "Informations de contact",
+        "Name": "Nom",
+        "NamePlaceholder": "Nom complet",
+        "Phone": "Téléphone",
+        "PhonePlaceholder": "Numéro de téléphone",
+        "Email": "Email (optionnel)",
+        "EmailPlaceholder": "Adresse email",
+        "Comment": "Commentaire (optionnel)",
+        "CommentPlaceholder": "Votre message",
+        "PrivacyCheckbox": "J'accepte la",
+        "PrivacyCheckbox1": "Politique de confidentialité",
+        "SubmitEmail": "Demander un devis",
+        "SubmitWhatsapp": "Contacter via WhatsApp",
+        "MakeAbsPlaceholder": "Ma marque n'est pas répertoriée",
+        "MakeCustomText": "Spécifiez manuellement la marque et le modèle"
+    },
+    "Gallery": {
+        "Title": "Voir quelques photos"
+    }
+}

@@ -1,0 +1,157 @@
+{
+    "Navbar": {
+        "Catalog": "Katalog",
+        "Benefits": "Vorteile",
+        "FAQ": "FAQ",
+        "Contacts": "Kontakt",
+        "CTAButtonText": "Angebot anfragen"
+    }, 
+    "Hero": {
+        "UpperText": "Hergestellt in Sierre — Cutting & assembly performed in Switzerland",
+        "Title": "Maßgeschneiderte EVA-Fußmatten — Komfort. Sauberkeit. Haltbarkeit.",
+        "Subtitle": "Geschnitten und montiert in Sierre (Wallis). Online bestellen, Lieferung in 1–3 Tagen in der Schweiz.",
+        "PrimaryButtonText": "Vorbestellen — CHF 120",
+        "SecondaryButtonText": "Oder kontaktieren Sie uns per WhatsApp",
+        "Benefits": {
+            "Benefit1": {
+                "Title": "Wasserdicht"
+            },
+            "Benefit2": {
+                "Title": "Rutschfest"
+            },
+            "Benefit3": {
+                "Title": "Leicht zu reinigen"
+            },
+             "Benefit4": {
+                "Title": "Maßgeschneiderte Passform"
+            }
+        }
+    },
+    "Why": {
+        "Title": "Warum SwissMat wählen?",
+        "Benefits": {
+            "Benefit1": {
+                "Title": "Technisches Material",
+                "Description": "Hochdichtes EVA — widersteht Frost und Hitze. Langlebiges und umweltfreundliches Material, ohne unangenehme Gerüche."
+            },
+            "Benefit2": {
+                "Title": "Perfekte Passform",
+                "Description": "Modellgenau geschnitten — kein Verrutschen. Jede Matte wird nach den exakten Abmessungen Ihres Fahrzeugs geschnitten."
+            },
+            "Benefit3": {
+                "Title": "Lokale Fertigung",
+                "Description": "Qualitätskontrolle in Sierre — schnelle Lieferung CH. Unterstützung der lokalen Walliser Wirtschaft."
+            }
+        }
+        
+    },
+    "Reviews": {
+        "Title": "Was unsere Kunden sagen",
+        "Reviews": {
+            "Review1": {
+                "Author": "— Anaïs, Sitten",
+                "Text": "Top-Qualität — Express-Lieferung nach Sierre. Meine Matten haben das Auto verwandelt."
+            },
+            "Review2": {
+                "Author": "— Marc, Martinach",
+                "Text": "Perfekte Passform für meinen Audi Q5. Tadellose Verarbeitung, Schweizer Fertigung vom Feinsten."
+            },
+            "Review3": {
+                "Author": "— Sophie, Monthey",
+                "Text": "Exzellenter Kundenservice, schnelle Lieferung. Ich empfehle SwissMat wärmstens."
+            }
+        }
+        
+    },
+    "Process": {
+        "Title": "Lieferschritte",
+        "Steps": {
+            "Step1": {
+                "Title": "Bestellung & Bestätigung",
+                "Description": "Sofortige Validierung Ihrer Konfiguration"
+            },
+            "Step2": {
+                "Title": "Schnitt & Montage",
+                "Description": "Fertigung in Sierre (24–48h)"
+            },
+            "Step3": {
+                "Title": "Qualitätskontrolle",
+                "Description": "Prüfung und sorgfältige Verpackung"
+            },
+            "Step4": {
+                "Title": "Lieferung",
+                "Description": "1–3 Tage in der Schweiz / Abholung Sierre"
+            }
+        }
+    },
+    "FAQ": {
+        "Title": "Häufig gestellte Fragen",
+        "Questions": {
+            "Question1": {
+                "Question": "Wie lange dauert eine Bestellung?",
+                "Answer": "Unsere Matten werden innerhalb von 48 bis 72 Stunden nach Auftragsbestätigung hergestellt. Die Lieferung dauert anschließend 1 bis 3 Werktage in der Schweiz."
+            },
+            "Question2": {
+                "Question": "Welche Garantie bieten Sie?",
+                "Answer": "Wir bieten 1 Jahr Garantie auf alle unsere EVA-Matten gegen Herstellungsfehler und normalen Verschleiß."
+            },
+            "Question3": {
+                "Question": "Riechen die Matten?",
+                "Answer": "Nein, unsere EVA-Matten werden aus neutralem, geruchlosem Material hergestellt, im Gegensatz zu manchen Gummimatten."
+            },
+            "Question4": {
+                "Question": "Kann man die Matten waschen?",
+                "Answer": "Ja, EVA-Matten lassen sich sehr leicht mit Seifenwasser reinigen. Sie sind auch frost- und hitzebeständig."
+            },
+            "Question5": {
+                "Question": "Liefern Sie außerhalb der Schweiz?",
+                "Answer": "Ja, wir liefern in ganz Europa. Kontaktieren Sie uns für ein individuelles Angebot je nach Zielort."
+            },
+            "Question6": {
+                "Question": "Wie ist Ihre Rückgabepolitik?",
+                "Answer": "Sie haben 14 Tage Zeit, um Ihre Matten zurückzugeben, falls sie nicht benutzt wurden und sich in der Originalverpackung befinden."
+            }
+        }
+    },
+    "Footer": {
+        "Title": "SwissMat — Lokal gefertigte EVA-Matten. Lieferung CH 1–3 Tage.",
+        "Subtitle": "Hergestellt in Sierre, Wallis — SwissMat",
+        "Contact": "Kontakt",
+        "QuickLinks": "Schnelllinks",
+        "Address": "Sierre, Wallis Schweiz",
+        "PrivacyPolicy": "Datenschutzerklärung",
+        "ReturnPolicy": "Rückgabebedingungen",
+        "AGB": "AGB"
+    },
+    "Constructor": {
+        "Title": "Konfigurieren Sie Ihre Fußmatte",
+        "Make": "Marke",
+        "MakePlaceholder": "Marke wählen",
+        "Model": "Modell",
+        "ModelPlaceholder": "Modell wählen",
+        "Pattern": "Muster",
+        "BaseColor": "Wählen Sie die Farbe der Matte",
+        "EdgeColor": "Wählen Sie die Farbe der Umrandung",
+        "Kit": "Kit",
+        "KitOption1": "Vorne (CHF 120)",
+        "KitOption2": "Komplett + Kofferraum (CHF 160)",
+        "ContactInfo": "Kontaktinformationen",
+        "Name": "Name",
+        "NamePlaceholder": "Vollständiger Name",
+        "Phone": "Telefon",
+        "PhonePlaceholder": "Telefonnummer",
+        "Email": "E-Mail (optional)",
+        "EmailPlaceholder": "E-Mail-Adresse",
+        "Comment": "Kommentar (optional)",
+        "CommentPlaceholder": "Ihre Nachricht",
+        "PrivacyCheckbox": "Ich akzeptiere die",
+        "PrivacyCheckbox1": "Datenschutzerklärung",
+        "SubmitEmail": "Angebot Anfragen",
+        "SubmitWhatsapp": "Per WhatsApp Kontaktieren",
+        "MakeAbsPlaceholder": "Meine Marke ist nicht aufgeführt",
+        "MakeCustomText": "Marke und Modell manuell angeben"
+    },
+    "Gallery": {
+        "Title": "Sehen Sie sich einige Fotos an"
+    }
+}
