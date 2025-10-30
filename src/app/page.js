@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from "react";
-import LocomotiveScroll from "locomotive-scroll";
 
 import Preloader from "@/components/Preloader/Preloader";
 import Constructor from "@/components/Constructor/Constructor";
@@ -15,10 +14,12 @@ import Reviews from "@/components/Reviews/Reviews";
 import Why from "@/components/Why/Why";
 export default function Home() {
 useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      smooth: true
-    });
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      new LocomotiveScroll({ smooth: true });
+    })();
   }, []);
+
   return (
     <>
        <Preloader />
