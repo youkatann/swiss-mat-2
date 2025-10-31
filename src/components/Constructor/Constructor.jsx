@@ -134,13 +134,13 @@ export default function CarMatCustomizer() {
       `*Phone:* ${form.phone}\n` +
       `*Message:* ${form.comment || '—'}`
 
-    const phoneNumber = '380960823440' // ← replace with your WhatsApp number (no +)
+    const phoneNumber = '380960823440'
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     window.open(url, '_blank')
   }
 
   const inputClass =
-    'appearance-none border border-foreground rounded-full px-[24px] py-[16px] w-full text-sm focus:outline-none focus:ring-2 focus:ring-black transition bg-white'
+    'appearance-none border border-foreground rounded-full px-4 sm:px-6 py-3 sm:py-4 w-full text-sm focus:outline-none focus:ring-2 focus:ring-black transition bg-white'
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -153,19 +153,20 @@ export default function CarMatCustomizer() {
 
   return (
     <motion.div
-      className="flex mt-36 gap-2"
+      className="flex flex-col lg:flex-row mt-20 lg:mt-36 gap-6 px-4 sm:px-8 lg:px-0"
       initial="hidden"
       animate="visible"
     >
+      {/* LEFT SIDE */}
       <motion.form
-        id='Constructor'
+        id="Constructor"
         onSubmit={handleEmailSubmit}
-        className="flex-1 flex flex-col justify-center bg-white p-[36px] rounded-[24px]"
+        className="flex-1 flex flex-col justify-center bg-white p-6 sm:p-8 lg:p-[36px] rounded-[24px]"
         variants={fadeIn}
         custom={0}
       >
         <motion.h3
-          className="text-[64px] font-bold tracking-tighter leading-[0.9]"
+          className="text-[36px] sm:text-[48px] lg:text-[64px] font-bold tracking-tighter leading-[1]"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
@@ -173,31 +174,22 @@ export default function CarMatCustomizer() {
           {messages?.Constructor.Title}
         </motion.h3>
         <motion.div
-          className="relative z-[1] h-[80vh] mt-[36px]"
+          className="relative z-[1] h-[50vh] sm:h-[60vh] lg:h-[80vh] mt-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <img
-            src={baseImg}
-            alt="Base"
-            className="absolute inset-0 w-full h-full object-contain"
-          />
-          <img
-            src={borderImg}
-            alt="Border"
-            className="absolute inset-0 w-full h-full object-contain"
-          />
+          <img src={baseImg} alt="Base" className="absolute inset-0 w-full h-full object-contain" />
+          <img src={borderImg} alt="Border" className="absolute inset-0 w-full h-full object-contain" />
         </motion.div>
       </motion.form>
 
-      {/* RIGHT PANEL */}
+      {/* RIGHT SIDE */}
       <motion.div
-        className="flex-1 h-fit flex flex-col bg-white p-[36px] rounded-[24px] gap-2"
+        className="flex-1 flex flex-col bg-white p-6 sm:p-8 lg:p-[36px] rounded-[24px] gap-3 mt-6 lg:mt-0"
         variants={fadeIn}
         custom={1}
       >
-        {/* Brand */}
         {!form.customBrand && (
           <select
             value={form.brand}
@@ -216,7 +208,6 @@ export default function CarMatCustomizer() {
           </select>
         )}
 
-        {/* Model */}
         {!form.customBrand && form.brand && (
           <select
             value={form.model}
@@ -232,7 +223,6 @@ export default function CarMatCustomizer() {
           </select>
         )}
 
-        {/* Custom Brand */}
         <label className="flex items-center gap-2 text-xs mt-1">
           <input
             type="checkbox"
@@ -317,20 +307,20 @@ export default function CarMatCustomizer() {
           </a>
         </label>
 
-        <div className="flex gap-2 mt-2">
-          <motion.div whileHover={{ scale: 1.05 }}>
-            <CTAButton type="submit" variant="filled" className="flex-1 transition">
+        <div className="flex flex-col sm:flex-row gap-2 mt-4">
+          <motion.div whileHover={{ scale: 1.05 }} className="flex-1">
+            <CTAButton type="submit" variant="filled" className="w-full transition">
               {messages?.Constructor.SubmitEmail}
             </CTAButton>
           </motion.div>
 
-          <motion.div whileHover={{ scale: 1.05 }}>
+          <motion.div whileHover={{ scale: 1.05 }} className="flex-1">
             <CTAButton
               title={messages?.Constructor.SubmitWhatsapp}
               type="button"
               variant="outline"
               onClick={handleWhatsappSubmit}
-              className="flex-1 transition"
+              className="w-full transition"
             >
               {messages?.Constructor.SubmitWhatsapp}
             </CTAButton>

@@ -41,10 +41,10 @@ function LinkItem({ href, children, className = "" }) {
   )
 }
 
-function Footer() {
+export default function Footer() {
   const { messages } = useI18n()
   if (!messages || !messages.Footer)
-    return <section className="px-[80px] py-[80px] bg-background" />
+    return <section className="px-[16px] py-[40px] bg-background" />
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -58,47 +58,48 @@ function Footer() {
   return (
     <motion.section
       id="Footer"
-      className="flex gap-2 mt-36 w-full"
+      className="flex flex-col lg:flex-row gap-4 mt-24 w-full px-[16px] sm:px-[32px] lg:px-[80px]"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }} // <- анімації лише коли в полі зору
+      viewport={{ once: true, amount: 0.2 }}
     >
-      {/* Logo + About */}
+      {/* Лого + опис */}
       <motion.div
-        className="flex flex-col gap-[24px] w-1/2 p-[36px] bg-muted rounded-[24px]"
+        className="flex flex-col gap-6 lg:w-1/2 p-6 sm:p-8 bg-muted rounded-[24px]"
         variants={fadeIn}
         custom={0}
       >
         <motion.img
           src="/logo.png"
           alt="SwissMat Logo"
-          className="w-50"
+          className="w-[160px] sm:w-[200px]"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         />
-        <div className="flex flex-col gap-4">
-          <span className="text-[24px] font-medium tracking-tighter">
+        <div className="flex flex-col gap-3">
+          <span className="text-[20px] sm:text-[24px] font-medium tracking-tighter">
             {messages?.Footer.Title}
           </span>
-          <p className="text-[16px] font-medium tracking-tighter">
+          <p className="text-[14px] sm:text-[16px] font-medium tracking-tighter text-muted-foreground">
             {messages?.Footer.Subtitle}
           </p>
         </div>
       </motion.div>
 
-      {/* Contact + Quick Links */}
-      <div className="flex gap-2 w-1/2">
+      {/* Контакти + лінки */}
+      <div className="flex flex-col sm:flex-row gap-4 lg:w-1/2">
+        {/* Контакти */}
         <motion.div
-          className="flex flex-col gap-[24px] w-1/2 p-[36px] bg-muted rounded-[24px]"
+          className="flex flex-col gap-5 sm:w-1/2 p-6 sm:p-8 bg-muted rounded-[24px]"
           variants={fadeIn}
           custom={1}
         >
-          <span className="text-[32px] font-medium tracking-tighter leading-[0.9]">
+          <span className="text-[24px] sm:text-[28px] font-medium tracking-tighter leading-[1.1]">
             {messages?.Footer.Contact}
           </span>
-          <div className="flex flex-col gap-[8px]">
+          <div className="flex flex-col gap-2 text-[14px] sm:text-[16px]">
             <LinkItem href="tel:+41795497825" className="text-foreground">
               <PhoneIcon className="w-4 h-4" /> +41 79 549 78 25
             </LinkItem>
@@ -125,15 +126,16 @@ function Footer() {
           </div>
         </motion.div>
 
+        {/* Швидкі посилання */}
         <motion.div
-          className="flex flex-col gap-[24px] w-1/2 p-[36px] bg-muted rounded-[24px]"
+          className="flex flex-col gap-5 sm:w-1/2 p-6 sm:p-8 bg-muted rounded-[24px]"
           variants={fadeIn}
           custom={2}
         >
-          <span className="text-[32px] font-medium tracking-tighter leading-[0.9]">
+          <span className="text-[24px] sm:text-[28px] font-medium tracking-tighter leading-[1.1]">
             {messages?.Footer.QuickLinks}
           </span>
-          <div className="flex flex-col gap-[8px]">
+          <div className="flex flex-col gap-2 text-[14px] sm:text-[16px]">
             <LinkItem href="#Faq" className="text-foreground">
               FAQ
             </LinkItem>
@@ -152,5 +154,3 @@ function Footer() {
     </motion.section>
   )
 }
-
-export default Footer

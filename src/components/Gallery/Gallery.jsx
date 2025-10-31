@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 function Gallery() {
   const { messages } = useI18n()
   if (!messages || !messages.Gallery)
-    return <section className="px-[80px] py-[80px] bg-background" />
+    return <section className="px-[16px] py-[40px] bg-background" />
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -25,18 +25,19 @@ function Gallery() {
 
   return (
     <motion.section
-      className="flex gap-2 h-screen mt-36"
+      className="flex flex-col lg:flex-row gap-2 mt-20 lg:mt-36 min-h-screen px-[16px] lg:px-[80px]"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      <div className="flex flex-col w-1/2 gap-2">
+      {/* Ліва колонка */}
+      <div className="flex flex-col w-full lg:w-1/2 gap-2">
         <motion.div
-          className="bg-white p-[36px] rounded-[24px]"
+          className="bg-white p-[24px] lg:p-[36px] rounded-[24px]"
           variants={fadeIn}
           custom={0}
         >
-          <h3 className="text-[64px] font-bold tracking-tighter leading-[0.9]">
+          <h3 className="text-[36px] md:text-[48px] lg:text-[64px] font-bold tracking-tighter leading-[1.1] md:leading-[1] lg:leading-[0.9]">
             {messages.Gallery.Title}
           </h3>
         </motion.div>
@@ -44,7 +45,7 @@ function Gallery() {
         {["/photos/images-1.png", "/photos/images-3.png"].map((src, i) => (
           <motion.div
             key={src}
-            className="h-full rounded-[24px]"
+            className="h-[200px] md:h-[300px] lg:h-full rounded-[24px]"
             style={bgStyle(src)}
             variants={fadeIn}
             custom={i + 1}
@@ -53,11 +54,12 @@ function Gallery() {
         ))}
       </div>
 
-      <div className="flex flex-col w-1/2 gap-2">
+      {/* Права колонка */}
+      <div className="flex flex-col w-full lg:w-1/2 gap-2">
         {["/photos/images-4.tiff", "/photos/images-2.jpg"].map((src, i) => (
           <motion.div
             key={src}
-            className="h-full rounded-[24px]"
+            className="h-[200px] md:h-[300px] lg:h-full rounded-[24px]"
             style={bgStyle(src)}
             variants={fadeIn}
             custom={i + 3}

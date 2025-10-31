@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 function Reviews() {
   const { messages } = useI18n()
   if (!messages || !messages.Reviews)
-    return <section className="px-[80px] py-[80px] bg-background" />
+    return <section className="px-[16px] py-[40px] bg-background" />
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -18,34 +18,37 @@ function Reviews() {
 
   return (
     <motion.section
-      className="mt-36 flex gap-2"
+      id="Reviews"
+      className="mt-24 lg:mt-36 flex flex-col lg:flex-row gap-4 px-[16px] md:px-[40px] xl:px-[80px]"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
+      {/* Ліва колонка з заголовком */}
       <motion.div
-        className="p-[36px] bg-white rounded-[24px] min-w-[30%]"
+        className="p-[24px] md:p-[36px] bg-white rounded-[24px] w-full lg:min-w-[30%]"
         variants={fadeIn}
         custom={0}
       >
-        <h3 className="text-[64px] font-bold tracking-tighter leading-[0.9]">
+        <h3 className="text-[36px] md:text-[48px] xl:text-[64px] font-bold tracking-tighter leading-[0.9]">
           {messages?.Reviews.Title}
         </h3>
       </motion.div>
 
-      <div className="flex gap-2">
+      {/* Блок відгуків */}
+      <div className="flex flex-col sm:flex-row flex-wrap gap-4 w-full">
         {[1, 2, 3].map((i) => (
           <motion.div
             key={i}
-            className="flex flex-col justify-between p-[36px] bg-white rounded-[24px]"
+            className="flex flex-col justify-between p-[24px] md:p-[36px] bg-white rounded-[24px] w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.5rem)]"
             variants={fadeIn}
             custom={i}
             whileHover={{ y: -4 }}
           >
-            <span className="text-[32px] font-medium tracking-tighter leading-[0.9]">
+            <span className="text-[20px] md:text-[24px] xl:text-[32px] font-medium tracking-tighter leading-[1.1] mb-2">
               {messages?.Reviews.Reviews[`Review${i}`].Author}
             </span>
-            <p className="text-[16px] font-medium tracking-tighter leading-[1.2]">
+            <p className="text-[14px] md:text-[16px] font-medium tracking-tight leading-[1.3]">
               {messages?.Reviews.Reviews[`Review${i}`].Text}
             </p>
           </motion.div>

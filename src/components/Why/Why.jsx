@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 function Why() {
   const { messages } = useI18n()
   if (!messages || !messages.Why)
-    return <section className="px-[80px] py-[80px] bg-background" />
+    return <section className="px-[24px] py-[60px] bg-background" />
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -19,34 +19,36 @@ function Why() {
   return (
     <motion.section
       id="Benefits"
-      className="mt-36 flex gap-2"
+      className="mt-20 md:mt-36 flex flex-col lg:flex-row gap-4 px-[24px] md:px-[60px] xl:px-[80px]"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
+      {/* Заголовок */}
       <motion.div
-        className="p-[36px] bg-white rounded-[24px] min-w-[40%]"
+        className="p-[24px] md:p-[36px] bg-white rounded-[24px] w-full lg:min-w-[40%]"
         variants={fadeIn}
         custom={0}
       >
-        <h3 className="text-[64px] font-bold tracking-tighter leading-[0.9]">
+        <h3 className="text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] font-bold tracking-tighter leading-[1]">
           {messages?.Why.Title}
         </h3>
       </motion.div>
 
-      <div className="flex gap-2">
+      {/* Блоки з перевагами */}
+      <div className="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row gap-4 w-full">
         {[1, 2, 3].map((i) => (
           <motion.div
             key={i}
-            className="flex flex-col justify-between p-[36px] bg-white rounded-[24px]"
+            className="flex flex-col justify-between p-[24px] md:p-[32px] bg-white rounded-[24px] flex-1"
             variants={fadeIn}
             custom={i}
             whileHover={{ y: -4 }}
           >
-            <span className="text-[32px] font-medium tracking-tighter leading-[0.9]">
+            <span className="text-[24px] sm:text-[28px] md:text-[32px] font-medium tracking-tighter leading-[1]">
               {messages?.Why.Benefits[`Benefit${i}`].Title}
             </span>
-            <p className="text-[16px] font-medium tracking-tighter leading-[1.2]">
+            <p className="text-[14px] sm:text-[15px] md:text-[16px] font-medium tracking-tight leading-[1.3] mt-2">
               {messages?.Why.Benefits[`Benefit${i}`].Description}
             </p>
           </motion.div>

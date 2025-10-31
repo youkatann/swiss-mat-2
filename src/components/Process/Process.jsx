@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 function Process() {
   const { messages } = useI18n()
   if (!messages || !messages.Process)
-    return <section className="px-[80px] py-[80px] bg-background" />
+    return <section className="px-[16px] py-[40px] bg-background" />
 
   const fadeIn = {
     hidden: { opacity: 0, y: 25 },
@@ -26,38 +26,44 @@ function Process() {
 
   return (
     <motion.section
-      className="flex flex-col gap-2 mt-36"
+      className="flex flex-col gap-4 mt-20 md:mt-36 px-[16px] sm:px-[40px] md:px-[80px]"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
+      {/* Заголовок */}
       <motion.div
-        className="p-[36px] bg-white rounded-[24px] w-1/2"
+        className="p-[24px] sm:p-[36px] bg-white rounded-[24px] w-full md:w-1/2"
         variants={fadeIn}
         custom={0}
       >
-        <h3 className="text-[64px] font-bold tracking-tighter leading-[0.9]">
+        <h3 className="text-[36px] sm:text-[48px] md:text-[64px] font-bold tracking-tighter leading-[1]">
           {messages?.Process.Title}
         </h3>
       </motion.div>
 
-      <div className="flex flex-col gap-2">
+      {/* Сітка кроків */}
+      <div className="flex flex-col gap-4">
+        {/* 2 рядки для десктопів */}
         {[0, 1].map((row) => (
-          <div key={row} className="flex gap-2">
+          <div
+            key={row}
+            className="flex flex-col sm:flex-row gap-4"
+          >
             {steps.slice(row * 2, row * 2 + 2).map(({ Icon, step }, i) => (
               <motion.div
                 key={step}
-                className="flex flex-col justify-between bg-white rounded-[24px] p-[36px] w-1/2 h-[30vh]"
+                className="flex flex-col justify-between bg-white rounded-[24px] p-[24px] sm:p-[36px] w-full sm:w-1/2 h-auto sm:h-[30vh]"
                 variants={fadeIn}
                 custom={i + row * 2 + 1}
                 whileHover={{ y: -4 }}
               >
-                <Icon className="w-[48px] h-[48px]" />
-                <div className="flex flex-col gap-6">
-                  <span className="text-[32px] font-medium tracking-tighter leading-[0.9]">
+                <Icon className="w-[40px] h-[40px] sm:w-[48px] sm:h-[48px]" />
+                <div className="flex flex-col gap-4 sm:gap-6 mt-4 sm:mt-0">
+                  <span className="text-[24px] sm:text-[28px] md:text-[32px] font-medium tracking-tighter leading-[1]">
                     {messages?.Process.Steps[`Step${step}`].Title}
                   </span>
-                  <p className="text-[16px] font-medium tracking-tighter leading-[1.2]">
+                  <p className="text-[14px] sm:text-[16px] font-medium leading-[1.3]">
                     {messages?.Process.Steps[`Step${step}`].Description}
                   </p>
                 </div>
