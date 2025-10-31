@@ -23,7 +23,7 @@ export default function CarMatCustomizer() {
   })
 
   if (!messages || !messages.Constructor)
-    return <section className="px-[16px] py-[40px] bg-background" />
+    return <section className="bg-background" />
 
   const carData = {
     Audi: ['A1', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'Q2', 'Q3', 'Q5', 'Q7', 'Q8', 'e-tron'],
@@ -153,7 +153,7 @@ export default function CarMatCustomizer() {
 
   return (
     <motion.div
-      className="flex flex-col lg:flex-row mt-20 lg:mt-36 gap-6 px-4 sm:px-8 lg:px-0"
+      className="flex flex-col lg:flex-row gap-2 w-full mt-16"
       initial="hidden"
       animate="visible"
     >
@@ -186,7 +186,7 @@ export default function CarMatCustomizer() {
 
       {/* RIGHT SIDE */}
       <motion.div
-        className="flex-1 flex flex-col bg-white p-6 sm:p-8 lg:p-[36px] rounded-[24px] gap-3 mt-6 lg:mt-0"
+        className="flex-1 flex flex-col bg-white p-6 sm:p-8 lg:p-[36px] rounded-[24px] gap-3"
         variants={fadeIn}
         custom={1}
       >
@@ -298,11 +298,7 @@ export default function CarMatCustomizer() {
             className="accent-black w-4 h-4"
           />
           {messages?.Constructor.PrivacyCheckbox}{' '}
-          <a
-            href="/privacy-policy"
-            target="_blank"
-            className="text-blue-600 underline"
-          >
+          <a href="/privacy-policy" target="_blank" className="text-blue-600 underline">
             {messages?.Constructor.PrivacyCheckbox1}
           </a>
         </label>

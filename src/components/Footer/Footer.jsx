@@ -44,7 +44,7 @@ function LinkItem({ href, children, className = "" }) {
 export default function Footer() {
   const { messages } = useI18n()
   if (!messages || !messages.Footer)
-    return <section className="px-[16px] py-[40px] bg-background" />
+    return <section className="bg-background" />
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -58,7 +58,7 @@ export default function Footer() {
   return (
     <motion.section
       id="Footer"
-      className="flex flex-col lg:flex-row gap-4 mt-24 w-full px-[16px] sm:px-[32px] lg:px-[80px]"
+      className="flex flex-col lg:flex-row gap-2 w-full mt-16"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -89,7 +89,7 @@ export default function Footer() {
       </motion.div>
 
       {/* Контакти + лінки */}
-      <div className="flex flex-col sm:flex-row gap-4 lg:w-1/2">
+      <div className="flex flex-col sm:flex-row gap-2 lg:w-1/2">
         {/* Контакти */}
         <motion.div
           className="flex flex-col gap-5 sm:w-1/2 p-6 sm:p-8 bg-muted rounded-[24px]"

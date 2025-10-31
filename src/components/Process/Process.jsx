@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 function Process() {
   const { messages } = useI18n()
   if (!messages || !messages.Process)
-    return <section className="px-[16px] py-[40px] bg-background" />
+    return <section className="py-[40px] bg-background" />
 
   const fadeIn = {
     hidden: { opacity: 0, y: 25 },
@@ -26,7 +26,7 @@ function Process() {
 
   return (
     <motion.section
-      className="flex flex-col gap-4 mt-20 md:mt-36 px-[16px] sm:px-[40px] md:px-[80px]"
+      className="flex flex-col gap-2 mt-16 md:mt-36"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -42,13 +42,12 @@ function Process() {
         </h3>
       </motion.div>
 
-      {/* Сітка кроків */}
-      <div className="flex flex-col gap-4">
-        {/* 2 рядки для десктопів */}
+      {/* Кроки */}
+      <div className="flex flex-col gap-2">
         {[0, 1].map((row) => (
           <div
             key={row}
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-2"
           >
             {steps.slice(row * 2, row * 2 + 2).map(({ Icon, step }, i) => (
               <motion.div
@@ -59,7 +58,7 @@ function Process() {
                 whileHover={{ y: -4 }}
               >
                 <Icon className="w-[40px] h-[40px] sm:w-[48px] sm:h-[48px]" />
-                <div className="flex flex-col gap-4 sm:gap-6 mt-4 sm:mt-0">
+                <div className="flex flex-col gap-2 sm:gap-6 mt-4 sm:mt-0">
                   <span className="text-[24px] sm:text-[28px] md:text-[32px] font-medium tracking-tighter leading-[1]">
                     {messages?.Process.Steps[`Step${step}`].Title}
                   </span>

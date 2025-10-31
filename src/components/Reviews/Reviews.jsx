@@ -4,8 +4,7 @@ import { motion } from 'framer-motion'
 
 function Reviews() {
   const { messages } = useI18n()
-  if (!messages || !messages.Reviews)
-    return <section className="px-[16px] py-[40px] bg-background" />
+  if (!messages || !messages.Reviews) return <section className="bg-background" />
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -19,14 +18,14 @@ function Reviews() {
   return (
     <motion.section
       id="Reviews"
-      className="mt-24 lg:mt-36 flex flex-col lg:flex-row gap-4 px-[16px] md:px-[40px] xl:px-[80px]"
+      className="mt-16 lg:mt-36 flex flex-col lg:flex-row gap-2"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
       {/* Ліва колонка з заголовком */}
       <motion.div
-        className="p-[24px] md:p-[36px] bg-white rounded-[24px] w-full lg:min-w-[30%]"
+        className="p-[24px] md:p-[36px] bg-white rounded-[24px] w-full lg:w-[55%]"
         variants={fadeIn}
         custom={0}
       >
@@ -36,7 +35,7 @@ function Reviews() {
       </motion.div>
 
       {/* Блок відгуків */}
-      <div className="flex flex-col sm:flex-row flex-wrap gap-4 w-full">
+      <div className="flex flex-col sm:flex-row flex-wrap gap-2 w-full">
         {[1, 2, 3].map((i) => (
           <motion.div
             key={i}

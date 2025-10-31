@@ -4,8 +4,7 @@ import { motion } from "framer-motion"
 
 function Why() {
   const { messages } = useI18n()
-  if (!messages || !messages.Why)
-    return <section className="px-[24px] py-[60px] bg-background" />
+  if (!messages || !messages.Why) return <section className="bg-background" />
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -19,14 +18,14 @@ function Why() {
   return (
     <motion.section
       id="Benefits"
-      className="mt-20 md:mt-36 flex flex-col lg:flex-row gap-4 px-[24px] md:px-[60px] xl:px-[80px]"
+      className="mt-20 md:mt-36 flex flex-col lg:flex-row gap-2"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
       {/* Заголовок */}
       <motion.div
-        className="p-[24px] md:p-[36px] bg-white rounded-[24px] w-full lg:min-w-[40%]"
+        className="p-[24px] md:p-[36px] bg-white rounded-[24px] w-full lg:w-[55%]"
         variants={fadeIn}
         custom={0}
       >
@@ -36,7 +35,7 @@ function Why() {
       </motion.div>
 
       {/* Блоки з перевагами */}
-      <div className="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row gap-4 w-full">
+      <div className="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row gap-2 w-full">
         {[1, 2, 3].map((i) => (
           <motion.div
             key={i}

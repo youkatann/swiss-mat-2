@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 function Gallery() {
   const { messages } = useI18n()
   if (!messages || !messages.Gallery)
-    return <section className="px-[16px] py-[40px] bg-background" />
+    return <section className="bg-background" />
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -25,7 +25,7 @@ function Gallery() {
 
   return (
     <motion.section
-      className="flex flex-col lg:flex-row gap-2 mt-20 lg:mt-36 min-h-screen px-[16px] lg:px-[80px]"
+      className="flex flex-col lg:flex-row gap-2 mt-20 lg:mt-36 min-h-screen"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}

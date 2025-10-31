@@ -6,8 +6,7 @@ import { motion, AnimatePresence } from "framer-motion"
 export default function FAQ() {
   const [activeId, setActiveId] = useState(null)
   const { messages } = useI18n()
-  if (!messages || !messages.FAQ)
-    return <section className="px-4 py-12 bg-background" />
+  if (!messages || !messages.FAQ) return <section className="bg-background" />
 
   const faqs = Array.from({ length: 6 }, (_, i) => ({
     id: i + 1,
@@ -27,12 +26,12 @@ export default function FAQ() {
   return (
     <motion.section
       id="Faq"
-      className="w-full flex flex-col lg:flex-row overflow-hidden mt-20 lg:mt-36 gap-4 px-4 sm:px-8 lg:px-[80px]"
+      className="w-full flex flex-col lg:flex-row overflow-hidden mt-20 lg:mt-36 gap-2"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      {/* Ліва колонка з питаннями */}
+      {/* Ліва колонка */}
       <div className="w-full lg:w-1/2 flex flex-col gap-2">
         <motion.div
           className="p-6 sm:p-8 bg-white rounded-[24px]"
@@ -49,7 +48,6 @@ export default function FAQ() {
             <motion.div key={faq.id} variants={fadeIn} custom={i + 1}>
               <button
                 onClick={() => setActiveId(activeId === faq.id ? null : faq.id)}
-                whilehover="hover"
                 className={`w-full flex justify-between items-center text-left p-4 sm:p-6 rounded-[24px] transition-colors ${
                   activeId === faq.id
                     ? "bg-[#c5342b] text-white"
@@ -64,7 +62,6 @@ export default function FAQ() {
                 </span>
               </button>
 
-              {/* Мобільна відповідь прямо під питанням */}
               <AnimatePresence>
                 {activeId === faq.id && (
                   <motion.div
@@ -86,7 +83,7 @@ export default function FAQ() {
         </div>
       </div>
 
-      {/* Права колонка — тільки для великих екранів */}
+      {/* Права колонка */}
       <motion.div
         className="hidden lg:flex w-full lg:w-1/2 bg-white p-8 lg:p-10 flex-col justify-between items-start rounded-[24px] min-h-[320px]"
         variants={fadeIn}

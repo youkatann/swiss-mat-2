@@ -7,7 +7,7 @@ export default function CTAButton({
   onClick 
 }) {
   const base =
-    "px-6 py-3 text-lg font-semibold rounded-full transition-colors duration-200 cursor-pointer";
+    "px-3 md:px-6 py-3 text-md md:text-lg font-semibold rounded-full transition-colors duration-200 cursor-pointer";
 
   const styles =
     variant === "filled"
